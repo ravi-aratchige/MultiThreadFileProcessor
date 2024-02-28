@@ -7,7 +7,7 @@ import java.util.Map;
 public class FileProcessor implements Runnable {
     // class variables
     private final File file;
-    private Map<String, Integer> wordFrequency;
+    private final Map<String, Integer> wordFrequency;
     private int wordCount;
 
     // constructor for this class

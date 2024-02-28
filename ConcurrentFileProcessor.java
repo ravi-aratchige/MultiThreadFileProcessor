@@ -14,8 +14,20 @@ public class ConcurrentFileProcessor {
         // instantiate a directory object
         File directory = new File(directoryPath);
 
+        // check if the directory is empty
+        if (directory.listFiles() == null || directory.listFiles().length == 0) {
+            System.out.println("ERROR: The selected directory is empty!");
+            return;
+        }
+
         // traverse the directory object and detect all text files (ending in .txt or .TXT)
         File[] files = directory.listFiles((dir, name) -> name.toLowerCase().endsWith(".txt"));
+
+        // check if no text files are found
+        if (files.length == 0) {
+            System.out.println("ERROR: No text files found in the selected directory!");
+            return;
+        }
 
         // create a thread for each text file found
         Thread[] threads = new Thread[files.length];
