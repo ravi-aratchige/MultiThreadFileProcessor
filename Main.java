@@ -1,11 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        // Set the directory path to the "demo" folder
+        // set the directory path to the "demo" folder
         String directoryPath = "demo";
 
-        // Create an instance of ConcurrentFileProcessor and start processing
+        // instantiate the ConcurrentFileProcessor
         ConcurrentFileProcessor processor = new ConcurrentFileProcessor(directoryPath);
-        System.out.println("----- MULTI-THREAD FILE PROCESSOR -----");
+
+        System.out.println("\n----- MULTI-THREAD FILE PROCESSOR -----");
+        // begin multithreaded file processor
         processor.processFiles();
+        System.out.println("\n---------------------------------------");
     }
 }
