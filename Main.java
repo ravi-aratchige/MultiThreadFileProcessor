@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,14 +18,14 @@ public class Main {
                     launchDemo();
                     break;
                 case "2":
-                    launchGUI();
+                    launchGui();
                     break;
                 case "3":
                     System.out.println("Exiting application...");
                     System.out.println("Have a nice day!");
                     break;
                 default:
-                    System.out.println("Invalid choice. Please enter 1, 2, or 3.");
+                    System.out.println("ERROR: Please enter a valid option!");
                     break;
             }
         } while (!selection.equals("3"));
@@ -47,7 +46,7 @@ public class Main {
         System.out.println("\n---------------------------------------------");
     }
 
-    private static void launchGUI() {
+    private static void launchGui() {
         System.out.println("\n----- GUI: MULTI-THREAD FILE PROCESSOR -----");
         // start the GUI
         System.out.println("\nThe GUI has been launched.");
